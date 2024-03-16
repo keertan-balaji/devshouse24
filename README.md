@@ -1,5 +1,5 @@
 
-# EquiGuard                                                            (https://![Q](https://github.com/keertan-balaji/devshouse24/assets/121657323/d0f676f6-0dbd-4020-99b5-c321cc98cd65)
+# EquiGuard                                        
 Connect, Respect, Chat!
 
 - The following repository is the backend implementation of an AI system that was created for the DEVSHOUSE'24 hackathon conducted at the Vellore Institute of Technology, Chennai
