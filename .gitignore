@@ -3,3 +3,4 @@ model/utils/embedding_matrix.npy
 __pycache__
 .dockerignore
 Dockerfile
+SlackBot
