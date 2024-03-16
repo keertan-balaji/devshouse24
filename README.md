@@ -1,4 +1,4 @@
-![alt text](https://github.com/keertan-balaji/devshouse24/blob/master/Q.png?raw=true)
+![alt text](https://![Q](https://github.com/keertan-balaji/devshouse24/assets/121657323/d0f676f6-0dbd-4020-99b5-c321cc98cd65)
 # EquiGuard
 Connect, Respect, Chat!
 
