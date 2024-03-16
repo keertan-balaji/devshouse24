@@ -15,6 +15,6 @@ cd app
 uvicorn main:app --reload  
 ```
 - The repository also has the following files:-
-- - Devhouse24OLID.ipynb - Used to train the model
+  - Devhouse24OLID.ipynb - Used to train the model
   - Model - The folder containing the saved model along with a few utility files
-  - DicordBOT - The python file used to deploy the model as a Discord Bot
+  - DicordBOT - The Python file used to deploy the model as a Discord Bot
