@@ -16,7 +16,7 @@ class PredictionOut(BaseModel):
 def home():
     return {"health_check":"OK"}
 
-@app.post('/',response_model=PredictionOut)
+@app.get('/',response_model=PredictionOut)
 async def scoring_endpoint(item:TextIn):
     response = predict_pipeline(item.text)
     return {"response":response}
