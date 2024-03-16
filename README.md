@@ -8,3 +8,10 @@ Connect, Respect, Chat!
 - The following repository contains the 'app' folder that was dockerized and deployed into AWS Lambda Function. This is to provide a quick and seamless integration with the existing systems
 
 - The trained model was tested by implementing a Discord - bot on a group chat. The video of the demonstration of the work is provided in the DevFolio Website
+
+- To run the backend of the Application locally
+
+```
+cd app
+uvicorn main:app --reload  
+```
