@@ -2,8 +2,9 @@ import json
 from fastapi import FastAPI
 from pydantic import BaseModel
 from model.model import predict_pipeline
-
+from mangum import Mangum
 app = FastAPI()
+handler = Mangum(app)
 
 class TextIn(BaseModel):
     text:str
