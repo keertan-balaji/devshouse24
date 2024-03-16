@@ -1,0 +1,2 @@
+runtime: python3.11.4
+web: gunicorn -w 4 -k uvicornworkers.UvicornWorker main:app

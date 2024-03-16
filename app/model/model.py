@@ -20,7 +20,7 @@ with open(f'{BASEDIR}/utils/tokenizer.json') as f:
     data = json.load(f)
     tokenizer = tokenizer_from_json(data)
 
-def predict_pipeline(text):
+def predict_pipeline(text,model=model):
     text = re.sub(r'[!@#$(),\n"%^*?\:;~`0-9]', " ", text)
     text = re.sub(r"[[]]", " ", text)
     text = text.lower()
