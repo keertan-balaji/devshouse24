@@ -9,9 +9,12 @@ Connect, Respect, Chat!
 
 - The trained model was tested by implementing a Discord - bot on a group chat. The video of the demonstration of the work is provided in the DevFolio Website
 
-- To run the backend of the Application locally
-
+- To run the backend of the Application Locally
 ```
 cd app
 uvicorn main:app --reload  
 ```
+- The repository also has the following files:-
+- - Devhouse24OLID.ipynb - Used to train the model
+  - Model - The folder containing the saved model along with a few utility files
+  - DicordBOT - The python file used to deploy the model as a Discord Bot
