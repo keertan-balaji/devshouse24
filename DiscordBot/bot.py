@@ -10,6 +10,9 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from pathlib import Path
 import re
+import warnings
+
+warnings.filterwarnings("ignore")
 __version__ = "1.0"
 
 SENSITIVITY_THRESHOLD = 0.6
@@ -46,12 +49,13 @@ intents.message_content = True
 client = Client(intents=intents)
 
 async def analyze_message(user_message):
-    if user_message:
-        result = predict_pipeline(str(user_message.content))
-        if result == "toxic":
-            await Message.delete(user_message)
-            await user_message.author.send(f"Your message: {user_message.content} was deleted ny the bot as it goes against the serever's guidelines. Please ensure that you play a healhy role in the community.")
-
+    result = predict_pipeline(str(user_message.content))
+    if result == "toxic":
+        await Message.delete(user_message)
+        try:
+            await user_message.author.send(f"Your message: {user_message.content} was deleted ny the bot as it goes against the serever's guidelines. Please ensure that you play a healthy role in the community.")
+        except:
+            pass
 
 @client.event
 async def on_ready():
@@ -59,13 +63,9 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
-    
     username = str(message.author)
     user_message = str(message.content)
     channel = str(message.channel)
-
     await analyze_message(message)
 
 def main():
